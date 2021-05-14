@@ -19,7 +19,7 @@ Assumptions
 2. If the cigar operation type is I, S, or H, then the coordinate of reference genome is not present and hence the program maps it to 'None'. 
 3. If cigar type is M (match/mismatch), X (i.e mismmatch), or = (i.e perfect match), increment the index.
 4. If the co-ordinate requested for transcript in the query is beyond the length of the transcript, then an exception "KeyError" is caught. The program still read such value and throws an exception.
-5. If the coordinate of the transcript in the query text file is left blank, the script assumes the blank as 0 coordinate. The example for this particular instance is included in the test folder. 
+5. All the transcripts in the query file should have the coordinate listed. If left blank, then it would take the coordinate of the previous transcript erroneously. Example is listed in the testing files.
 
 
 Strengths:
