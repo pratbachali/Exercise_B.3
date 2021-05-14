@@ -4,18 +4,15 @@ import unittest
 
 class TestOutputMethods(unittest.TestCase):    
     
-    GenomeIndex.processor()
-
-
     # Provide a path to read an expected  file
-    expectedfile = open(r'/Users/prat/Documents/TestFiles/expected.txt',"r")
+    expectedfile = open(r'./TestFiles/expected.txt',"r")
     expectedlines = expectedfile.readlines()
     explength = len(expectedfile.readlines())
     expectedlines = filter(lambda line: not line.isspace(), expectedlines)
     expectedfile.close()
 
     # Provide a path to read an output file
-    outputfile = open(r'/Users/prat/Documents/TestFiles/output.txt',"r")
+    outputfile = open(r'./TestFiles/output.txt',"r")
     ouputlines = outputfile.readlines()
     outlength = len(outputfile.readlines())
     ouputlines = filter(lambda line: not line.isspace(), ouputlines)

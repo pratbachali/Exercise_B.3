@@ -1,0 +1,2 @@
+import GenomeIndex
+GenomeIndex.processor()

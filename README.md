@@ -17,8 +17,9 @@ The project is to trasnlate the transcript coordinates to the genome coordinates
 Assumptions 
 1. The coordinate of transcript (i.e query) is skipped if the cigar operation is D deletion or N 
 2. If the cigar operation type is I, S, or H, then the coordinate of reference genome is not present and hence the program maps it to 'None'. 
-3. If cigar type is M (match/mismatch), X (i.emismmatch), or = (i.e perfect match), increment the index.
+3. If cigar type is M (match/mismatch), X (i.e mismmatch), or = (i.e perfect match), increment the index.
 4. If the co-ordinate requested for transcript in the query is beyond the length of the transcript, then an exception "KeyError" is caught. The program still read such value and throws an exception.
+5. If the coordinate of the transcript in the query text file is left blank, the script assumes the blank as 0 coordinate. The example for this particular instance is included in the test folder. 
 
 
 Strengths:
